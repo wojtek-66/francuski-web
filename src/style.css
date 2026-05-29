@@ -45,7 +45,16 @@ body button {
    text-align: center;
 }
 
+.minor-title {
+   text-transform: uppercase;
+   font-weight: bold;
+   color: #777777;
+   letter-spacing: 1px;
+   font-size: 0.75em;
+}
 
+
+/* -------------------------*/
 
 .flagi {
    display: flex;
@@ -85,15 +94,6 @@ body button {
    margin-bottom: 30px;
 }
 
-   .main .smallTitle .title {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #777777;
-      letter-spacing: 1px;
-      font-size: 0.75em;
-   }
-
-
 .main .mainTitle {
    font-family: 'Noto Serif Display', serif;
    font-size: 2.5em;
@@ -118,7 +118,7 @@ body button {
    padding: 20px;
    background-color: #fff;
    border: 1px solid #cccccc;
-   border-radius: 6px;
+   border-radius: 20px;
    box-shadow: 8px 8px 12px #ddd;
    max-width: 360px;
 
@@ -138,6 +138,52 @@ body button {
 .main .formularz button {
    margin-top: 10px;
 }
+
+.main .wynik {
+   margin-top: 30px;
+   padding: 20px;
+   background: #ECEFF5;
+   border: 1px solid #d5d5d5;
+   border-radius: 20px;
+}
+
+   .main .wynik .do-tlumaczenia {
+      margin: 6px 0 24px 0;
+   }
+
+      .main .wynik .do-tlumaczenia span {
+         font-weight: bold;
+      }
+
+
+   .main .wynik .tlumaczenie {
+      font-family: 'Noto Serif Display', serif;
+      margin-bottom: 24px;
+   }
+
+      .main .wynik .tlumaczenie .rodzaj {
+         font-size: 1.4em;
+         color: #285a91;
+      }
+
+      .main .wynik .tlumaczenie .rzeczownik {
+         font-size: 2.2em;
+         font-weight: bold;
+         color: #005aba;
+      }
+
+   .main .wynik .tag {
+      font-size: 0.8em;
+      color: #777777;
+      background: #fff;
+      text-align: center;
+      padding: 3px 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      min-width: 120px;
+      max-width: fit-content;
+      margin: 0 auto;
+   }
 
 .stopka {
    background-color: #fff;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Tłumacz francuskiego</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="flagi">
+         <div class="flaga"></div>
+         <div class="flaga"></div>
+         <div class="flaga"></div>
+      </div>
+      <main class="main">
+         <div class="centered">
+            <div class="smallTitle">
+               <img src="images/flaga.png" width="24" alt="Flaga" />
+               <span class="minor-title">Narzędzia językowe</span>
+            </div>
+            <h1 class="mainTitle text-center">Tłumacz Rzeczowników</h1>
+            <h3 class="subTitle text-center">Jezyk <span>francuski</span></h3>
+            <section class="outer-formularz">
+               <form class="formularz">
+                  <label for="rzeczownik">Wybierz rzeczownik</label>
+                  <select id="rzeczownik" name="rzeczownik">
+                     <option value="1">Rzeczownik 1</option>
+                     <option value="2">Rzeczownik 2</option>
+                     <option value="3">Rzeczownik 3</option>
+                  </select>
+                  <button type="submit">Przetłumacz</button>
+               </form>
+               <div class="wynik text-center">
+                  <div>
+                     <span class="minor-title">Tłumaczenie po francusku</span>
+                  </div>
+                  <div class="do-tlumaczenia">
+                     <span>pies</span>
+                  </div>
+                  <div class="tlumaczenie">
+                     <span class="rodzaj">le</span>
+                     <span class="rzeczownik">chien</span>
+                  </div>
+                  <div class="tag">rodzaj: męski</div>
+               </div>
+            </section>
+         </div>
+      </main>
+      <footer class="stopka">
+         <span>Stopka z informacjami o autorze i prawach autorskich</span>
+      </footer>
+   </body>
+</html>

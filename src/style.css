@@ -113,14 +113,17 @@ body button {
 }
 
 
-.main .formularz {
+.main .outer-formularz {
+   max-width: 360px;
    margin: 0 auto;
+}
+
+.main .formularz {
    padding: 20px;
    background-color: #fff;
    border: 1px solid #cccccc;
    border-radius: 20px;
    box-shadow: 8px 8px 12px #ddd;
-   max-width: 360px;
 
    display: flex;
    flex-direction: column;

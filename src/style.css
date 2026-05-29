@@ -20,6 +20,25 @@ body p {
    padding: 0;
 }
 
+/* Formularze */
+body select {
+   padding: 10px;
+   border-radius: 12px;
+   background-color: #f5f5f5;
+   border: 1px solid #cccccc;
+}
+
+body button {
+   padding: 12px;
+   border-radius: 12px;
+   background-color: #005aba;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   font-weight: bold;
+   transition: background-color 0.3s ease;
+}
+
 
 /* Definicje pomocniczne (helpers) */
 .text-center {
@@ -63,7 +82,7 @@ body p {
    align-items: center; /* w szerokosci */
    justify-content: center; /* w dlugosci */
    gap: 10px;
-   margin-bottom: 40px;
+   margin-bottom: 30px;
 }
 
    .main .smallTitle .title {
@@ -86,10 +105,38 @@ body p {
    font-size: 1em;
    color: #999;
    letter-spacing: 1px;
+   margin-bottom: 40px;
 }
 
 .main .subTitle > span {
-   color: blue;
+   color: #005aba;
+}
+
+
+.main .formularz {
+   margin: 0 auto;
+   padding: 20px;
+   background-color: #fff;
+   border: 1px solid #cccccc;
+   border-radius: 6px;
+   box-shadow: 8px 8px 12px #ddd;
+   max-width: 360px;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.main .formularz label {
+   text-transform: uppercase;
+   font-size: 0.7em;
+   font-weight: bold;
+   color: #111;
+   letter-spacing: 1px;
+   margin-bottom: 3px;
+}
+
+.main .formularz button {
+   margin-top: 10px;
 }
 
 .stopka {

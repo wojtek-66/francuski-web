@@ -1,4 +1,6 @@
 body {
+   font-family: 'Arial', sans-serif;
+   line-height: 100%;
    background-color: #eeeeee;
    padding: 0;
    margin: 0;
@@ -36,8 +38,23 @@ body {
 .main .centered {
    margin: 0 auto;
    width: 600px;
-   background-color: aqua;
 }
+
+.main .smallTitle {
+   display: flex;
+   align-items: center; /* w szerokosci */
+   justify-content: center; /* w dlugosci */
+   gap: 10px;
+}
+
+.main .smallTitle .title {
+   text-transform: uppercase;
+   font-weight: bold;
+   color: #777777;
+   letter-spacing: 1px;
+   font-size: 0.75em;
+}
+
 
 .stopka {
    background-color: #fff;

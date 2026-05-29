@@ -1,14 +1,32 @@
+
+
 body {
    font-family: 'Arial', sans-serif;
    line-height: 100%;
    background-color: #eeeeee;
    padding: 0;
    margin: 0;
-   
    height: 100vh;
    display: flex;
    flex-direction: column;
 }
+
+body h1, 
+body h2, 
+body h3,
+body h4,
+body p {
+   margin: 0;
+   padding: 0;
+}
+
+
+/* Definicje pomocniczne (helpers) */
+.text-center {
+   text-align: center;
+}
+
+
 
 .flagi {
    display: flex;
@@ -45,16 +63,34 @@ body {
    align-items: center; /* w szerokosci */
    justify-content: center; /* w dlugosci */
    gap: 10px;
+   margin-bottom: 40px;
 }
 
-.main .smallTitle .title {
-   text-transform: uppercase;
-   font-weight: bold;
-   color: #777777;
+   .main .smallTitle .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #777777;
+      letter-spacing: 1px;
+      font-size: 0.75em;
+   }
+
+
+.main .mainTitle {
+   font-family: 'Noto Serif Display', serif;
+   font-size: 2.5em;
+   color: #111111;
+   margin-bottom: 20px;
+}
+
+.main .subTitle {
+   font-size: 1em;
+   color: #999;
    letter-spacing: 1px;
-   font-size: 0.75em;
 }
 
+.main .subTitle > span {
+   color: blue;
+}
 
 .stopka {
    background-color: #fff;

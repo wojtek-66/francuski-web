@@ -5,10 +5,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Tłumacz francuskiego</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="style.css" />
+      <script src="app.js" defer type="text/javascript"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    </head>
    <body>
       <div class="flagi">
@@ -25,12 +26,12 @@
             <h1 class="mainTitle text-center">Tłumacz Rzeczowników</h1>
             <h3 class="subTitle text-center">Jezyk <span>francuski</span></h3>
             <section class="outer-formularz">
-               <form class="formularz">
+               <form class="formularz" id="form-tlumaczenie">
                   <label for="rzeczownik">Wybierz rzeczownik</label>
                   <select id="rzeczownik" name="rzeczownik">
-                     <option value="1">Rzeczownik 1</option>
-                     <option value="2">Rzeczownik 2</option>
-                     <option value="3">Rzeczownik 3</option>
+                     <option value="Rzeczownik 1">Rzeczownik 1</option>
+                     <option value="Rzeczownik 2">Rzeczownik 2</option>
+                     <option value="Rzeczownik 3">Rzeczownik 3</option>
                   </select>
                   <button type="submit">Przetłumacz</button>
                </form>
@@ -39,13 +40,13 @@
                      <span class="minor-title">Tłumaczenie po francusku</span>
                   </div>
                   <div class="do-tlumaczenia">
-                     <span>pies</span>
+                     <span>--</span>
                   </div>
                   <div class="tlumaczenie">
-                     <span class="rodzaj">le</span>
-                     <span class="rzeczownik">chien</span>
+                     <span class="rodzaj"></span>
+                     <span class="rzeczownik">--</span>
                   </div>
-                  <div class="tag">rodzaj: męski</div>
+                  <div class="tag">--</div>
                </div>
             </section>
          </div>

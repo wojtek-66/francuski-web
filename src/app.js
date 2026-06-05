@@ -47,6 +47,7 @@ function tlumaczSerwer(rzeczownik) {
       success: function(rezultat) {
          // Wyświetlić cały kontener z tłumaczeniem
          $('#wynik-kontener').show()
+         $('#error').hide()
 
          // Przypisz rzeczownik do "#do-tlumaczenia"
          $('#do-tlumaczenia').text(rezultat.rzeczownik)

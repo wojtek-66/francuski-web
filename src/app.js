@@ -32,7 +32,40 @@ function tlumacz(rzeczownik) {
       }
    ]
 
-   return slownik.find(wpis => wpis.rzeczownik === rzeczownik)
+   const rezultat = slownik.find(wpis => wpis.rzeczownik === rzeczownik)
+   return rezultat
+}
+
+function tlumaczSerwer(rzeczownik) {
+   // Pobieranie tlumaczenia z serwera
+   $.ajax({
+      url: 'https://jlcs44f6sj3xmrvsr4qjqqcrjm0rffyt.lambda-url.eu-west-1.on.aws',
+      method: 'GET',
+      data: {
+         rzeczownik: rzeczownik
+      },
+      success: function(rezultat) {
+         // Wyświetlić cały kontener z tłumaczeniem
+         $('#wynik-kontener').show()
+
+         // Przypisz rzeczownik do "#do-tlumaczenia"
+         $('#do-tlumaczenia').text(rezultat.rzeczownik)
+
+         // Przypisz tlumaczenie do "#wynik"
+         $('#wynik').text(rezultat.tlumaczenie)
+
+         // Przypisz rodzajnik do "#rodzajnik"
+         $('#rodzajnik').text(rezultat.rodzajnik)
+
+         // Przypisz tag do "#tag"
+         $('#tag').text(rezultat.tag)
+      },
+      error: function(error) {
+         console.error('Błąd podczas tłumaczenia:', error)
+         $('#wynik-kontener').hide()
+         $('#error').show()
+      }
+   })
 }
 
 const rzeczowniki = [
@@ -40,13 +73,15 @@ const rzeczowniki = [
    'kot',
    'dom',
    'samochód',
-   'drzewo'
+   'drzewo',
+   'kwiat'
 ]
 
 $(document).ready(function() {
 
    // Ukryć tłumaczenie jeśli nie jest jeszcze dostępne
    $('#wynik-kontener').hide()
+   $('#error').hide()
 
    // Dodać rzeczowniki do selecta
    rzeczowniki.forEach(slowo => {
@@ -63,22 +98,7 @@ $(document).ready(function() {
 
       // Wyswietlamy je na stronie
       // Symulujemy odpowiedz serwera
-      const rezultat = tlumacz(rzeczownik)
-
-      // Wyświetlić cały kontener z tłumaczeniem
-      $('#wynik-kontener').show()
-
-      // Przypisz rzeczownik do "#do-tlumaczenia"
-      $('#do-tlumaczenia').text(rezultat.rzeczownik)
-
-      // Przypisz tlumaczenie do "#wynik"
-      $('#wynik').text(rezultat.tlumaczenie)
-
-      // Przypisz rodzajnik do "#rodzajnik"
-      $('#rodzajnik').text(rezultat.rodzajnik)
-
-      // Przypisz tag do "#tag"
-      $('#tag').text(rezultat.tag)
+      tlumaczSerwer(rzeczownik)
 
    }
 
